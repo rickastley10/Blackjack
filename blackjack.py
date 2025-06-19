@@ -27,7 +27,7 @@ while 1 == 1:
     if cardsbot == 21:
         input('YOU LOST')
         exit()
-    elif cardsplayer >= 22:
+    elif cardsbot >= 22:
         print('you got', cardsplayer)
         print('and dealer got', cardsbot)
         input('YOU WON')
