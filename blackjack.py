@@ -9,6 +9,7 @@ cardsplayer = cardsplayer + random.randint(5,10)
 cardsbot = cardsbot + random.randint(5,10)
 dealersfirstcard = cardsbot
 cardsbot = cardsbot + random.randint(5,10)
+playermoney = 500
 while 1 == 1:
     print('dealers first card - ', dealersfirstcard)
     print('your cards - ', cardsplayer)
@@ -19,32 +20,86 @@ while 1 == 1:
             print('you got', cardsplayer)
             print('and dealer got', cardsbot)
             input('YOU WON')
-            exit()
+            playermoney = playermoney * 2
+            print('you have $', playermoney, '\n\n\n\n\n')
+            cardsplayer = 0
+            cardsbot = 0
+            randomvalue = 0
+            cardsplayer = cardsplayer + random.randint(5,10)
+            cardsplayer = cardsplayer + random.randint(5,10)
+            cardsbot = cardsbot + random.randint(5,10)
+            dealersfirstcard = cardsbot
+            cardsbot = cardsbot + random.randint(5,10)
         elif cardsplayer >= 22:
             print('you got', cardsplayer)
             print('and dealer got', cardsbot)
             input('YOU LOST')
-            exit()
+            playermoney = playermoney / 2
+            print('you have $', playermoney, '\n\n\n\n\n')
+            cardsplayer = 0
+            cardsbot = 0
+            randomvalue = 0
+            cardsplayer = cardsplayer + random.randint(5,10)
+            cardsplayer = cardsplayer + random.randint(5,10)
+            cardsbot = cardsbot + random.randint(5,10)
+            dealersfirstcard = cardsbot
+            cardsbot = cardsbot + random.randint(5,10)
     elif ch == '2':
         print(cardsbot, ' - dealer', cardsplayer, ' - yours')
         if cardsplayer >= cardsbot:
             print('you got', cardsplayer)
             print('and dealer got', cardsbot)            
             input('you won')
-            exit()
+            playermoney = playermoney * 2
+            print('you have $', playermoney, '\n\n\n\n\n')
+            cardsplayer = 0
+            cardsbot = 0
+            randomvalue = 0
+            cardsplayer = cardsplayer + random.randint(5,10)
+            cardsplayer = cardsplayer + random.randint(5,10)
+            cardsbot = cardsbot + random.randint(5,10)
+            dealersfirstcard = cardsbot
+            cardsbot = cardsbot + random.randint(5,10)
         else:
             print('you got', cardsplayer)
             print('and dealer got', cardsbot)
             input('you lost')
-            exit()
+            playermoney = playermoney / 2
+            print('you have $', playermoney, '\n\n\n\n\n')
+            cardsplayer = 0
+            cardsbot = 0
+            randomvalue = 0
+            cardsplayer = cardsplayer + random.randint(5,10)
+            cardsplayer = cardsplayer + random.randint(5,10)
+            cardsbot = cardsbot + random.randint(5,10)
+            dealersfirstcard = cardsbot
+            cardsbot = cardsbot + random.randint(5,10)
     cardsbot = cardsbot + random.randint(1,9)
     if cardsbot == 21:
         print('you got', cardsplayer)
         print('and dealer got', cardsbot)
         input('YOU LOST')
-        exit()
+        playermoney = playermoney / 2
+        print('you have $', playermoney, '\n\n\n\n\n')
+        cardsplayer = 0
+        cardsbot = 0
+        randomvalue = 0
+        cardsplayer = cardsplayer + random.randint(5,10)
+        cardsplayer = cardsplayer + random.randint(5,10)
+        cardsbot = cardsbot + random.randint(5,10)
+        dealersfirstcard = cardsbot
+        cardsbot = cardsbot + random.randint(5,10)
     elif cardsbot >= 22:
         print('you got', cardsplayer)
         print('and dealer got', cardsbot)
         input('YOU WON')
-        exit()
+        playermoney = playermoney * 2
+        print('you have $', playermoney, '\n\n\n\n\n')
+        cardsplayer = 0
+        cardsbot = 0
+        randomvalue = 0
+        cardsplayer = cardsplayer + random.randint(5,10)
+        cardsplayer = cardsplayer + random.randint(5,10)
+        cardsbot = cardsbot + random.randint(5,10)
+        dealersfirstcard = cardsbot
+        cardsbot = cardsbot + random.randint(5,10)
