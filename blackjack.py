@@ -13,12 +13,10 @@ dealersfirstcard = cardsbot
 cardsbot = cardsbot + random.randint(5,10)
 playermoney = 500
 while 1 == 1:
-    secondcard = random.randint(5,10)
-    firstcard = cardsplayer - secondcard
     print('dealers first card - ', dealersfirstcard)
     print('your first card - ', firstcard, ' and your second card - ', secondcard) 
     print('your total cards - ', cardsplayer)
-    ch = input(' [1] - to get a card (1 to 9) \n [2] - to bust the cards: ')
+    ch = input(' [1] - to get a card (1 to 10) \n [2] - to bust the cards: ')
     if ch == '1':
         thirdcard = random.randint(1,9)
         cardsplayer = cardsplayer + thirdcard
@@ -34,7 +32,9 @@ while 1 == 1:
             cardsbot = 0
             randomvalue = 0
             cardsplayer = cardsplayer + random.randint(5,10)
-            cardsplayer = cardsplayer + random.randint(5,10)
+            firstcard = cardsplayer
+            secondcard = random.randint(5,10)
+            cardsplayer = firstcard + secondcard
             cardsbot = cardsbot + random.randint(5,10)
             dealersfirstcard = cardsbot
             cardsbot = cardsbot + random.randint(5,10)
@@ -48,12 +48,12 @@ while 1 == 1:
             cardsbot = 0
             randomvalue = 0
             cardsplayer = cardsplayer + random.randint(5,10)
-            cardsplayer = cardsplayer + random.randint(5,10)
+            firstcard = cardsplayer
+            secondcard = random.randint(5,10)
+            cardsplayer = firstcard + secondcard
             cardsbot = cardsbot + random.randint(5,10)
             dealersfirstcard = cardsbot
             cardsbot = cardsbot + random.randint(5,10)
-
-
         if cardsplayer == 21:
             print('you got', cardsplayer)
             print('and dealer got', cardsbot)
@@ -64,7 +64,9 @@ while 1 == 1:
             cardsbot = 0
             randomvalue = 0
             cardsplayer = cardsplayer + random.randint(5,10)
-            cardsplayer = cardsplayer + random.randint(5,10)
+            firstcard = cardsplayer
+            secondcard = random.randint(5,10)
+            cardsplayer = firstcard + secondcard
             cardsbot = cardsbot + random.randint(5,10)
             dealersfirstcard = cardsbot
             cardsbot = cardsbot + random.randint(5,10)
@@ -78,7 +80,9 @@ while 1 == 1:
             cardsbot = 0
             randomvalue = 0
             cardsplayer = cardsplayer + random.randint(5,10)
-            cardsplayer = cardsplayer + random.randint(5,10)
+            firstcard = cardsplayer
+            secondcard = random.randint(5,10)
+            cardsplayer = firstcard + secondcard
             cardsbot = cardsbot + random.randint(5,10)
             dealersfirstcard = cardsbot
             cardsbot = cardsbot + random.randint(5,10)
@@ -94,7 +98,9 @@ while 1 == 1:
             cardsbot = 0
             randomvalue = 0
             cardsplayer = cardsplayer + random.randint(5,10)
-            cardsplayer = cardsplayer + random.randint(5,10)
+            firstcard = cardsplayer
+            secondcard = random.randint(5,10)
+            cardsplayer = firstcard + secondcard
             cardsbot = cardsbot + random.randint(5,10)
             dealersfirstcard = cardsbot
             cardsbot = cardsbot + random.randint(5,10)
@@ -108,7 +114,9 @@ while 1 == 1:
             cardsbot = 0
             randomvalue = 0
             cardsplayer = cardsplayer + random.randint(5,10)
-            cardsplayer = cardsplayer + random.randint(5,10)
+            firstcard = cardsplayer
+            secondcard = random.randint(5,10)
+            cardsplayer = firstcard + secondcard
             cardsbot = cardsbot + random.randint(5,10)
             dealersfirstcard = cardsbot
             cardsbot = cardsbot + random.randint(5,10)
