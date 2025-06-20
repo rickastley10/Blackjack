@@ -9,22 +9,31 @@ while 1 == 1:
     if ch == '1':
         cardsplayer = cardsplayer + random.randint(1,9)
         if cardsplayer == 21:
+            print('you got', cardsplayer)
+            print('and dealer got', cardsbot)
             input('YOU WON')
             exit()
         elif cardsplayer >= 22:
             print('you got', cardsplayer)
+            print('and dealer got', cardsbot)
             input('YOU LOST')
             exit()
     elif ch == '2':
         print(cardsbot, ' - dealer', cardsplayer, ' - yours')
         if cardsplayer >= cardsbot:
+            print('you got', cardsplayer)
+            print('and dealer got', cardsbot)            
             input('you won')
             exit()
         else:
+            print('you got', cardsplayer)
+            print('and dealer got', cardsbot)
             input('you lost')
             exit()
     cardsbot = cardsbot + random.randint(1,9)
     if cardsbot == 21:
+        print('you got', cardsplayer)
+        print('and dealer got', cardsbot)
         input('YOU LOST')
         exit()
     elif cardsbot >= 22:
