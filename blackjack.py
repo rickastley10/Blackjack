@@ -1,3 +1,4 @@
+
 print('get as close as possible to 21 without going over it \n you dont know the dealers number of total cards \n you can stop if you think you are closer to 21 than the dealer \n')
 import random
 cardsplayer = 0
@@ -9,7 +10,7 @@ cardsbot = cardsbot + random.randint(5,10)
 dealersfirstcard = cardsbot
 cardsbot = cardsbot + random.randint(5,10)
 while 1 == 1:
-    print('dealers first card - ', dealersfirstcard')
+    print('dealers first card - ', dealersfirstcard)
     print('your cards - ', cardsplayer)
     ch = input(' [1] - to get a card (1 to 9) \n [2] - to bust the cards: ')
     if ch == '1':
