@@ -18,7 +18,9 @@ while 1 == 1:
     print('your total cards - ', cardsplayer)
     ch = input(' [1] - to get a card (1 to 9) \n [2] - to bust the cards: ')
     if ch == '1':
-        cardsplayer = cardsplayer + random.randint(1,9)
+        thirdcard = random.randint(1,9)
+        cardsplayer = cardsplayer + thirdcard
+        print('\n           the third card you got is.... - ', thirdcard, '   \n')
         cardsbot = cardsbot + random.randint(1,9)
         if cardsbot == 21:
             print('you got', cardsplayer)
