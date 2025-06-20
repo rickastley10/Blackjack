@@ -3,6 +3,8 @@ import random
 cardsplayer = 0
 cardsbot = 0
 randomvalue = 0
+cardsplayer = cardsplayer + random.randint(5,10)
+cardsplayer = cardsplayer + random.randint(5,10)
 while 1 == 1:
     print(cardsplayer)
     ch = input(' [1] - to get a card (1 to 9) \n [2] - to bust the cards: ')
