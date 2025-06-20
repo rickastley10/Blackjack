@@ -19,12 +19,43 @@ while 1 == 1:
     ch = input(' [1] - to get a card (1 to 9) \n [2] - to bust the cards: ')
     if ch == '1':
         cardsplayer = cardsplayer + random.randint(1,9)
-        if cardsplayer == 21:
+        cardsbot = cardsbot + random.randint(1,9)
+        if cardsbot == 21:
+            print('you got', cardsplayer)
+            print('and dealer got', cardsbot)
+            input('YOU LOST')
+            playermoney = playermoney / 2
+            print('you have $', playermoney, '\n\n\n\n\n')
+            cardsplayer = 0
+            cardsbot = 0
+            randomvalue = 0
+            cardsplayer = cardsplayer + random.randint(5,10)
+            cardsplayer = cardsplayer + random.randint(5,10)
+            cardsbot = cardsbot + random.randint(5,10)
+            dealersfirstcard = cardsbot
+            cardsbot = cardsbot + random.randint(5,10)
+        elif cardsbot >= 22:
             print('you got', cardsplayer)
             print('and dealer got', cardsbot)
             input('YOU WON')
             playermoney = playermoney * 2
             print('you have $', playermoney, '\n\n\n\n\n')
+            cardsplayer = 0
+            cardsbot = 0
+            randomvalue = 0
+            cardsplayer = cardsplayer + random.randint(5,10)
+            cardsplayer = cardsplayer + random.randint(5,10)
+            cardsbot = cardsbot + random.randint(5,10)
+            dealersfirstcard = cardsbot
+            cardsbot = cardsbot + random.randint(5,10)
+
+
+        if cardsplayer == 21:
+            print('you got', cardsplayer)
+            print('and dealer got', cardsbot)
+            input('YOU WON')
+            playermoney = playermoney * 2
+            print('you have $', playermoney, '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
             cardsplayer = 0
             cardsbot = 0
             randomvalue = 0
@@ -77,32 +108,11 @@ while 1 == 1:
             cardsbot = cardsbot + random.randint(5,10)
             dealersfirstcard = cardsbot
             cardsbot = cardsbot + random.randint(5,10)
-    cardsbot = cardsbot + random.randint(1,9)
-    if cardsbot == 21:
-        print('you got', cardsplayer)
-        print('and dealer got', cardsbot)
-        input('YOU LOST')
-        playermoney = playermoney / 2
-        print('you have $', playermoney, '\n\n\n\n\n')
-        cardsplayer = 0
-        cardsbot = 0
-        randomvalue = 0
-        cardsplayer = cardsplayer + random.randint(5,10)
-        cardsplayer = cardsplayer + random.randint(5,10)
-        cardsbot = cardsbot + random.randint(5,10)
-        dealersfirstcard = cardsbot
-        cardsbot = cardsbot + random.randint(5,10)
-    elif cardsbot >= 22:
-        print('you got', cardsplayer)
-        print('and dealer got', cardsbot)
-        input('YOU WON')
-        playermoney = playermoney * 2
-        print('you have $', playermoney, '\n\n\n\n\n')
-        cardsplayer = 0
-        cardsbot = 0
-        randomvalue = 0
-        cardsplayer = cardsplayer + random.randint(5,10)
-        cardsplayer = cardsplayer + random.randint(5,10)
-        cardsbot = cardsbot + random.randint(5,10)
-        dealersfirstcard = cardsbot
-        cardsbot = cardsbot + random.randint(5,10)
+    elif ch == 'cheat.enable("console_override")':
+        print('\n\n\n\n\n\n             you enabled cheats, you cheater... :( \n\n\n\n\n\n')
+        for cheatx in range(99):
+            playermoney = playermoney * cheatx * cheatx + cheatx
+            print(' little cheater got $', playermoney, ' now', end = '')
+        ch == ''
+    else:
+        print('try again please\n\n\n')
