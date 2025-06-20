@@ -13,6 +13,8 @@ dealersfirstcard = cardsbot
 cardsbot = cardsbot + random.randint(5,10)
 playermoney = 500
 while 1 == 1:
+    secondcard = random.randint(5,10)
+    firstcard = cardsplayer - secondcard
     print('dealers first card - ', dealersfirstcard)
     print('your first card - ', firstcard, ' and your second card - ', secondcard) 
     print('your total cards - ', cardsplayer)
