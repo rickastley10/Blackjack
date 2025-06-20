@@ -6,9 +6,11 @@ randomvalue = 0
 cardsplayer = cardsplayer + random.randint(5,10)
 cardsplayer = cardsplayer + random.randint(5,10)
 cardsbot = cardsbot + random.randint(5,10)
+dealersfirstcard = cardsbot
 cardsbot = cardsbot + random.randint(5,10)
 while 1 == 1:
-    print(cardsplayer)
+    print('dealers first card - ', dealersfirstcard')
+    print('your cards - ', cardsplayer)
     ch = input(' [1] - to get a card (1 to 9) \n [2] - to bust the cards: ')
     if ch == '1':
         cardsplayer = cardsplayer + random.randint(1,9)
