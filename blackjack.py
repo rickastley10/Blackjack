@@ -16,7 +16,7 @@ while 1 == 1:
     print('dealers first card - ', dealersfirstcard)
     print('your first card - ', firstcard, ' and your second card - ', secondcard) 
     print('your total cards - ', cardsplayer)
-    ch = input(' [1] - to get a card (1 to 10) \n [2] - to bust the cards: ')
+    ch = input(' [1] - to get a card (1 to 10) \n [2] - to bust the cards \n [0] - to reset the match \n $>  ')
     if ch == '1':
         thirdcard = random.randint(1,9)
         cardsplayer = cardsplayer + thirdcard
@@ -126,5 +126,17 @@ while 1 == 1:
             playermoney = playermoney * cheatx * cheatx + cheatx
             print(' little cheater got $', playermoney, ' now', end = '')
         ch == ''
+    elif ch == '0':
+        cardsplayer = 0
+        cardsbot = 0
+        randomvalue = 0
+        cardsplayer = cardsplayer + random.randint(5,10)
+        firstcard = cardsplayer
+        secondcard = random.randint(5,10)
+        cardsplayer = firstcard + secondcard
+        cardsbot = cardsbot + random.randint(5,10)
+        dealersfirstcard = cardsbot
+        cardsbot = cardsbot + random.randint(5,10)       
+
     else:
         print('try again please\n\n\n')
