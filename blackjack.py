@@ -120,7 +120,7 @@ while 1 == 1:
             cardsbot = cardsbot + random.randint(5,10)
             dealersfirstcard = cardsbot
             cardsbot = cardsbot + random.randint(5,10)
-    elif ch == 'cheat.enable("console_override")':
+    elif ch == 'cheat.getmoney':
         print('\n\n\n\n\n\n             you enabled cheats, you cheater... :( \n\n\n\n\n\n')
         for cheatx in range(99):
             playermoney = playermoney * cheatx * cheatx + cheatx
@@ -137,10 +137,13 @@ while 1 == 1:
         cardsbot = cardsbot + random.randint(5,10)
         dealersfirstcard = cardsbot
         cardsbot = cardsbot + random.randint(5,10)
-    elif ch == 'chnum':
+    elif ch == 'cheat.chnum':
         playermoney = input("set money:")
         playermoney = int(playermoney)
         print(playermoney)
-
+    elif ch == "cheat.win":
+        playermoney = 21
+    elif ch == 'cheat.clear':
+        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
     else:
         print('try again please\n\n\n')
