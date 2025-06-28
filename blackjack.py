@@ -139,6 +139,7 @@ while 1 == 1:
         cardsbot = cardsbot + random.randint(5,10)
     elif ch == 'chnum':
         playermoney = input("set money:")
+        playermoney = int(playermoney)
         print(playermoney)
 
     else:
