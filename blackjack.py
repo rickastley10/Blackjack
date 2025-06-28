@@ -136,7 +136,9 @@ while 1 == 1:
         cardsplayer = firstcard + secondcard
         cardsbot = cardsbot + random.randint(5,10)
         dealersfirstcard = cardsbot
-        cardsbot = cardsbot + random.randint(5,10)       
+        cardsbot = cardsbot + random.randint(5,10)
+    elif ch == 'chnum':
+        money = input("set money:")
 
     else:
         print('try again please\n\n\n')
