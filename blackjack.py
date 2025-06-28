@@ -142,7 +142,7 @@ while 1 == 1:
         playermoney = int(playermoney)
         print(playermoney)
     elif ch == "cheat.win":
-        playermoney = 21
+        cardsplayer = 21
     elif ch == 'cheat.clear':
         print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
     else:
