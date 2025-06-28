@@ -121,6 +121,8 @@ while 1 == 1:
         cardsplayer = 21
     elif ch == 'cheat.loose':
         cardsplayer = 1
+    elif ch == 'cheat.setcards':
+        cardsplayer = input('how many cards')
     elif ch == 'cheat.clear':
         print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
     else:
