@@ -52,53 +52,58 @@ while 1 == 1:
         print('\n           the third card you got is.... - ', thirdcard, '   \n')
         cardsbot = cardsbot + random.randint(1,9)
         if cardsbot == 21:
+            playermoney = playermoney * 2
+            print('you have $', playermoney, '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
             print('you got', cardsplayer)
             print('and dealer got', cardsbot)
             input('YOU LOST')
-            playermoney = playermoney / 2
-            print('you have $', playermoney, '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
+
             aftergame()
             
         elif cardsbot >= 22:
-            print('you got', cardsplayer)
-            print('and dealer got', cardsbot)
-            input('YOU WON')
-            beforeplayermoney = playermoney
             playermoney = playermoney * 2
             print('you have $', playermoney, '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
-            aftergame()
-        if cardsplayer == 21:
             print('you got', cardsplayer)
             print('and dealer got', cardsbot)
             input('YOU WON')
             beforeplayermoney = playermoney
+
+            aftergame()
+        if cardsplayer == 21:
             playermoney = playermoney * 2
-            print('you have $', playermoney, '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
+            print('you have $', playermoney, '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
+            print('you got', cardsplayer)
+            print('and dealer got', cardsbot)
+            input('YOU WON')
+            beforeplayermoney = playermoney
             aftergame()
         elif cardsplayer >= 22:
+            playermoney = playermoney * 2
+            print('you have $', playermoney, '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
             print('you got', cardsplayer)
             print('and dealer got', cardsbot)
             input('YOU LOST')
             beforeplayermoney = playermoney
-            playermoney = playermoney / 2
-            print('you have $', playermoney, '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
+
             aftergame()
     elif ch == '2':
         print(cardsbot, ' - dealer', cardsplayer, ' - yours')
         if cardsplayer >= cardsbot:
-            print('you got', cardsplayer)
-            print('and dealer got', cardsbot)            
-            input('you won')
-            beforeplayermoney = playermoney
             playermoney = playermoney * 2
             print('you have $', playermoney, '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
+            print('you got', cardsplayer)
+            print('and dealer got', cardsbot)            
+            input('YOU WON')
+            beforeplayermoney = playermoney
+
             aftergame()
         else:
+            playermoney = playermoney * 2
+            print('you have $', playermoney, '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
             print('you got', cardsplayer)
             print('and dealer got', cardsbot)
-            input('you lost')
-            playermoney = playermoney / 2
-            print('you have $', playermoney, '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
+            input('YOU LOST')
+
             aftergame()
     elif ch == 'cheat.getmoney':
         print('\n\n\n\n\n\n             you enabled cheats, you cheater... :( \n\n\n\n\n\n')
