@@ -18,38 +18,8 @@ mostplayermoney = playermoney
 record = playermoney
 
 # Initialize first round
-cardsplayer = random.randint(5,10)
-firstcard = cardsplayer
-secondcard = random.randint(5,10)
-cardsplayer = firstcard + secondcard
-cardsbot = random.randint(5,10)
-dealersfirstcard = cardsbot
-cardsbot += random.randint(5,10)
-
-# Entry widget for user input
-entry = tk.Entry(root)
-entry.pack()
-
-def clear_screen():
-    for widget in root.winfo_children():  # Get all widgets in the window
-        widget.destroy()  # Destroy each widget
-    
-    # Recreate essential widgets (entry, etc.)
-    global entry
-    entry = tk.Entry(root)
-    entry.pack()
-    tk.Button(root, text="Submit", command=process_input).pack()
-
-def aftergame():
-    global record, cardsplayer, cardsbot, randomvalue, firstcard, secondcard, mostplayermoney, playermoney
-    
-    if mostplayermoney > playermoney:
-        record = mostplayermoney
-    elif mostplayermoney <= playermoney:
-        record = playermoney
-        mostplayermoney = playermoney
-    
-    # Reset game state
+def init_round():
+    global cardsplayer, cardsbot, firstcard, secondcard, dealersfirstcard
     cardsplayer = random.randint(5,10)
     firstcard = cardsplayer
     secondcard = random.randint(5,10)
@@ -57,7 +27,31 @@ def aftergame():
     cardsbot = random.randint(5,10)
     dealersfirstcard = cardsbot
     cardsbot += random.randint(5,10)
+
+init_round()
+
+# Entry widget for user input
+entry = tk.Entry(root)
+entry.pack()
+
+def clear_screen():
+    for widget in root.winfo_children():
+        widget.destroy()
     
+    global entry
+    entry = tk.Entry(root)
+    entry.pack()
+    tk.Button(root, text="Submit", command=process_input).pack()
+
+def aftergame():
+    global record, mostplayermoney, playermoney
+    if mostplayermoney > playermoney:
+        record = mostplayermoney
+    elif mostplayermoney <= playermoney:
+        record = playermoney
+        mostplayermoney = playermoney
+    
+    init_round()  # This will reset all card values including dealersfirstcard
     update_display()
 
 def lost():
@@ -79,7 +73,7 @@ def won():
     aftergame()
 
 def process_input():
-    global cardsplayer, cardsbot, playermoney
+    global cardsplayer, cardsbot
     
     ch = entry.get()
     entry.delete(0, tk.END)
